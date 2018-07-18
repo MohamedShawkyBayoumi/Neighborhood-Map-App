@@ -31,7 +31,12 @@ class App extends Component {
           <div className='right-section' id='right-section'>
             <Header openNav={this.openNav}/>
             <section>
-              <Map/>
+              <Map
+                containerElement={<div style={{height: '100%'}}/>}
+                mapElement={<div style={{height: '100%'}}/>}
+                loadingElement={<div style={{height: '100%'}}/>}
+                googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyDxLUeezrEtn52a8Jt4JNrxeLd69WVyHBQ&v=3.exp&libraries=geometry,drawing,places'
+              />
             </section>
             <Footer/>
           </div>

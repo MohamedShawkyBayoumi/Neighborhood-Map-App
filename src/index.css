@@ -14,25 +14,46 @@ html {
 
 header {
   height: 85px;
-  background-color: rgb(9, 36, 71);
+  background-image: url("images/bg.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-color: rgb(46, 46, 46);
   color: #fff;
+  border-bottom: 3px solid rgb(128, 128, 128);
+}
+
+header .hamburger-icon .key-icon {
+  background-color: #32b9a3;
+  background-position: center;
+  padding: 20px 28px;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 35px;
+  height: 45px;
+  background-image: url("images/menu-btn.png");
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 50px rgb(26, 26, 26);
+}
+
+header .key-icon:hover {
+  background-color: #4aacda;
 }
 
 header .hamburger-icon {
-  padding: 20px 0 10px 50px;
+  padding: 35px 0 10px 50px;
 }
 
 
 header .hamburger-icon .openbtn {
   font-size: 30px;
   cursor: pointer;
-  background-color: rgb(32, 71, 155);
+  background-color: #ebbb2c;
   padding: 5px 10px;
   border-radius: 5px;
 }
 
 header .hamburger-icon .openbtn:hover {
-  background-color: rgb(51, 78, 197);
+  background-color: #dfc67a;
 }
 
 
@@ -80,25 +101,38 @@ aside .filter-section {
   
 }
 
+
+
 aside .filter-section input {
-  height: 30px;
+  height: 46px;
   width: 100%;
   padding: 3px 3px 3px 8px;
+  background:none;
+  border: 2px solid #f7ad1c;
+  background-image: url("images/bg.png");
+  color: #ffe0a3;
+  font-size: 16px;
 }
 
 aside .filter-section button {
   letter-spacing: 1px;
   margin-right: 20px;
   height:41px;
-  background-color: darkgreen;
+  background-image: url("images/filter-btn.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 36px;
+  height: 42px;
+  background-color: #f7ad1c;
   border: none;
   color: #fff;
   font-family: cursive;
   cursor: pointer;
+  padding: 28px 30px;
 }
 
 aside .filter-section button:hover {
-  background-color: crimson;
+  background-color: #ffc041;
 }
 
 aside .list {
@@ -132,7 +166,7 @@ aside .list .list-links li a {
 
 aside .list .list-links li a:hover {
   background-color: rgb(43, 43, 43);
-  color: #fff;
+  color: #ffeabf;
   
   
 }
@@ -145,7 +179,7 @@ aside .close .closebtn {
 
 aside .close .closebtn {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 25px;
   font-size: 32px;
   margin-left: 50px;
@@ -161,6 +195,20 @@ aside .close .closebtn:hover {
   background-color: #333;
 }
 
+aside .pharaoh {
+  width: 50px;
+  height: 60px;
+}
+
+aside .pharaoh .pharaoh-img {
+  position: absolute;
+  top: 10px;
+  left: 110px;
+  background-image: url("images/pharaoh.png");
+  width: 61px;
+  height: 120px;
+}
+
 /* Aside */
 
 
@@ -169,7 +217,7 @@ aside .close .closebtn:hover {
 
 section {
   background-color: brown;
-  height: calc(100vh - 135px);
+  height: calc(100vh - 158px);
   
 }
 
@@ -180,23 +228,50 @@ section {
 footer {
   background-color: rgb(37, 37, 37);
   color: #fff;
-}
-
-footer p {
-  margin: 0;
-  padding: 5px 0;
-  font-size: 14px;
+  height: 70px;
   text-align: center;
-  height: 40px;
+  
 }
 
-footer p a {
+footer .footer-container {
+  display: flex;
+  justify-content: center;
+}
+
+footer .footer-container .footer-text {
+  padding: 25px 10px 0 15px;
+}
+
+footer .footer-container .footer-text .copy-rights {
+  font-size: 16px;
+  
+}
+
+footer .footer-container .footer-text .copy-rights a {
   color: blanchedalmond;
   text-decoration: none;
 }
 
-footer p a:hover {
+footer .footer-container .footer-text .copy-rights a:hover {
   color: gold;
+}
+
+footer .f-pyramids {
+  padding-top: 30px;
+  background-image: url("images/f-pyramids.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 26px;
+  width: 50px;
+}
+
+footer .statue {
+  background-image: url("images/statue-test.png");
+  background-repeat: no-repeat;
+  height: 63px;
+  width: 50px;
+  background-position: center;
+  
 }
 
 

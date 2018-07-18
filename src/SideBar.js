@@ -4,12 +4,15 @@ class SideBar extends React.Component {
     render (){
         return (
             <aside id='aside'>
+                <div className='pharaoh'>
+                    <div className='pharaoh-img'></div>
+                </div>
                 <div className='close'>
                     <a href="javascript:void(0)" className="closebtn" onClick={this.props.closeNav}>&times;</a>
                 </div>
                 <div className='filter-section'>
                     <input type='text' placeholder='Search' />
-                    <button>Filter</button>
+                    <button></button>
                 </div>
                 <div className='list'>
                     <ul className='list-links'>

@@ -1,35 +1,13 @@
-import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
+import React from 'react';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const Map = withScriptjs(withGoogleMap((props) => {
+  return (
+    <GoogleMap defaultZoom={6.78}
+        center={{lat: 27.9865707, lng: 30.9938622}}>
+          <Marker position={{lat: 25.7188346, lng: 32.6550816}}/>
+    </GoogleMap>
+  )
+}))
 
-class Map extends Component {
-  static defaultProps = {
-    center: {
-      lat: 27.9865707,
-      lng: 30.9938622
-    },
-    zoom: 6.78
-  };
-
-  render() {
-    return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: '100%', width: '100%' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyDxLUeezrEtn52a8Jt4JNrxeLd69WVyHBQ' }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-        >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text={'Google Map'}
-          />
-        </GoogleMapReact>
-      </div>
-    );
-  }
-}
-
-export default Map;
+export default Map
