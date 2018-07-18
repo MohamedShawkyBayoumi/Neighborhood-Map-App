@@ -51,7 +51,7 @@ header .hamburger-icon .openbtn:hover {
 
 .right-section {
   width: 100%;
-
+  transition: 0.5s;
 }
 
 /* right-section */
