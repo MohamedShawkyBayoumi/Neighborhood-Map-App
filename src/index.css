@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+
+/* Header */
+
+header {
+  height: 85px;
+  background-color: rgb(9, 36, 71);
+  color: #fff;
+}
+
+header .hamburger-icon {
+  padding: 20px 0 10px 50px;
+}
+
+
+header .hamburger-icon .openbtn {
+  font-size: 30px;
+  cursor: pointer;
+  background-color: rgb(32, 71, 155);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+header .hamburger-icon .openbtn:hover {
+  background-color: rgb(51, 78, 197);
+}
+
+
+/* Header */
+
+/* Main Page */
+
+.main-page {
+  display: flex;
+  
+}
+
+/* Main Page */
+
+/* right-section */
+
+.right-section {
+  width: 100%;
+
+}
+
+/* right-section */
+
+/* Aside */
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1;
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+  width: 0;
+  box-shadow: 3px 10px 30px #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+aside .filter-section {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 80px 10px 0 10px;
+  
+}
+
+aside .filter-section input {
+  height: 30px;
+  width: 100%;
+  padding: 3px 3px 3px 8px;
+}
+
+aside .filter-section button {
+  letter-spacing: 1px;
+  margin-right: 20px;
+  height:41px;
+  background-color: darkgreen;
+  border: none;
+  color: #fff;
+  font-family: cursive;
+  cursor: pointer;
+}
+
+aside .filter-section button:hover {
+  background-color: crimson;
+}
+
+aside .list {
+  margin-top: 20px;
+  
+}
+
+aside .list .list-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+}
+
+
+aside .list .list-links li {
+  
+  
+  
+}
+
+aside .list .list-links li a {
+  display: block;
+  text-decoration: none;
+  color: rgb(196, 196, 196);
+  padding: 15px 20px;
+  font-size: 14px;
+  border: 1px solid rgb(43, 43, 43);
+  
+}
+
+aside .list .list-links li a:hover {
+  background-color: rgb(43, 43, 43);
+  color: #fff;
+  
+  
+}
+
+aside .close .closebtn {
+  margin: 15px 0;
+  padding: 1px 10px;
+  border-radius: 50%;
+}
+
+aside .close .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 32px;
+  margin-left: 50px;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgb(70, 70, 70);
+  border: 1px solid rgb(85, 85, 85);
+  
+}
+
+
+aside .close .closebtn:hover {
+  background-color: #333;
+}
+
+/* Aside */
+
+
+
+/* Map */
+
+section {
+  background-color: brown;
+  height: calc(100vh - 135px);
+  
+}
+
+/* Map */
+
+
+/* Footer */
+footer {
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 14px;
+  text-align: center;
+  height: 40px;
+}
+
+footer p a {
+  color: blanchedalmond;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: gold;
+}
+
+
+/* Footer */
+
