@@ -8,6 +8,12 @@ class Header extends React.Component {
     render(){
         return (
             <header>
+                <div className='head-right-container'>
+                    <div className='head-text'>
+                        <h2>Egypt Ancient Locations</h2>
+                    </div>
+                    <div className='egypt-pin'></div>
+                </div>
                 <div className='hamburger-icon'>
                     {/*<span className='openbtn' onClick={this.props.openNav} >&#9776;</span>*/}
                     <span className='key-icon' onClick={this.props.openNav}></span>

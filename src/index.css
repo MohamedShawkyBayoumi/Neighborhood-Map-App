@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+
 body {
   margin: 0;
   padding: 0;
@@ -22,8 +25,35 @@ header {
   border-bottom: 3px solid rgb(128, 128, 128);
 }
 
+header .head-right-container {
+  display: flex;
+  float: right;
+  margin: 15px 70px 0 0;
+}
+
+header .head-right-container .head-text h2 {
+  margin: 0;
+  padding: 8px 15px 0 0;
+  font-size: 30px;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 5px;
+  text-shadow: 0px 5px 10px rgb(26, 26, 26);
+  color: #fff3db;
+}
+
+header .head-right-container .egypt-pin {
+  background-image: url("images/egypt-pin.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60px;
+  width: 35px;
+  
+}
+
+
+
 header .hamburger-icon .key-icon {
-  background-color: #32b9a3;
+  background-color: #27b19a;
   background-position: center;
   padding: 20px 28px;
   cursor: pointer;
@@ -85,6 +115,7 @@ aside {
   left: 0;
   height: 100%;
   z-index: 1;
+  
   background-color: rgb(37, 37, 37);
   color: #fff;
   width: 0;
@@ -112,6 +143,16 @@ aside .filter-section input {
   background-image: url("images/bg.png");
   color: #ffe0a3;
   font-size: 16px;
+}
+
+
+aside .filter-section input:focus {
+  border: 2px solid #ffc041;
+}
+
+
+aside .filter-section input:active {
+  border: 2px solid #ffc041;
 }
 
 aside .filter-section button {
@@ -266,7 +307,7 @@ footer .f-pyramids {
 }
 
 footer .statue {
-  background-image: url("images/statue-test.png");
+  background-image: url("images/statue.png");
   background-repeat: no-repeat;
   height: 63px;
   width: 50px;

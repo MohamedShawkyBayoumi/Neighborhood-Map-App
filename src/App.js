@@ -5,38 +5,34 @@ import SideBar from './SideBar'
 import Map from './Map'
 import Footer from './Footer'
 // api key = AIzaSyDxLUeezrEtn52a8Jt4JNrxeLd69WVyHBQ
+/*
+Foursquare API
+Client ID
+GYQCNBNLZLYOSZVSJ0WZFIWBPFVYKXLPDIFGDONAQMRRQW2P
+Client Secret
+C0FHXCOXYCJFEDMQRK0JLRTCZ15TFORBVWUIOGS1VNVQYG45
+*/
+/*
+https://api.foursquare.com/v2/venues/search?ll=25.694937,32.6244474&client_id=GYQCNBNLZLYOSZVSJ0WZFIWBPFVYKXLPDIFGDONAQMRRQW2P&client_secret=C0FHXCOXYCJFEDMQRK0JLRTCZ15TFORBVWUIOGS1VNVQYG45&v=20180719
+*/
+import * as FoursquareAPI from './FoursquareAPI'
+
 
 
 class App extends Component {
 
   state = {
-    Markers: [
-      {
-        placeName: 'El-Karnak',
-        position: {lat: 25.7188346, lng: 32.6550816}
-      },
-      {
-        placeName: 'Luxor Temple',
-        position: {lat: 25.699502, lng: 32.6368622}
-      },
-      {
-        placeName: 'Mortuary Temple of Hatshepsut',
-        position: {lat: 25.7379736, lng: 32.6063226}
-      },
-      {
-        placeName: 'Valley of the Kings',
-        position: {lat: 25.74258, lng: 32.5972163}
-      },
-      {
-        placeName: 'Temple of Isis',
-        position: {lat: 24.0255933, lng: 32.8819195}
-      },
-      {
-        placeName: 'Abu Simbel Temples',
-        position: {lat: 22.3372319, lng: 31.6236103}
-      }
-    ]
+    venue: []
   }
+
+
+  componentDidMount(){
+    FoursquareAPI.getVenue().then( venue => {
+      this.setState({ venue })
+    })
+    
+  }
+
 
   openNav() {
     document.getElementById("aside").style.width = "300px";
@@ -49,10 +45,12 @@ class App extends Component {
     document.getElementById("right-section").style.marginLeft= "0";
   }
 
+
+
   render() {
     return (
       <div className="App">
-
+      
         <SideBar closeNav={this.closeNav}/>
         
         <main className='main-page'>
@@ -61,6 +59,7 @@ class App extends Component {
             <Header openNav={this.openNav}/>
             <section>
               <Map
+                venue={this.state.venue}
                 isMarkerShown
                 containerElement={<div style={{height: '100%'}}/>}
                 mapElement={<div style={{height: '100%'}}/>}
