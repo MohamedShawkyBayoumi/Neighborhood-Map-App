@@ -4,7 +4,7 @@ const { compose, withProps, withStateHandlers } = require("recompose");
 //const FaAnchor = require("./src/images/pharaoh");
 
 
-{console.log(this.props.venue)}
+
 
 const Map = compose(
   
@@ -24,7 +24,8 @@ const Map = compose(
     defaultCenter={{lat: 27.9865707, lng: 30.9938622}}
   >
 
-  
+  {console.log(props.venue)}
+  {console.log(props.venue[0].location)}
 
     <Marker
       position={{ lat: 25.7188346, lng: 32.6550816 }}
@@ -32,7 +33,7 @@ const Map = compose(
     >
       {props.isOpen &&
       <InfoWindow onCloseClick={props.onToggleOpen}>
-        <h1>Just for testing</h1>
+          <h1>{props.venue[0].name}</h1>
       </InfoWindow>}
     </Marker>
   </GoogleMap>

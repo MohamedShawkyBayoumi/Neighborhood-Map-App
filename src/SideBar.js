@@ -16,6 +16,7 @@ class SideBar extends React.Component {
                 </div>
                 <div className='list'>
                     <ul className='list-links'>
+                    {/*
                         <li><a href='#'>Pyramids</a></li>
                         <li><a href='#'>Down Town</a></li>
                         <li><a href='#'>Egyptian Museum</a></li>
@@ -23,6 +24,9 @@ class SideBar extends React.Component {
                         <li><a href='#'>ElKarnak Temple</a></li>
                         <li><a href='#'>Sharm El-Sheikh</a></li>
                         <li><a href='#'>Hurghada</a></li>
+                    */}
+
+                    {console.log(this.props.venue[0].location)}
                     </ul>
                 </div>
             </aside>

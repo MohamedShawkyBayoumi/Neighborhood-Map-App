@@ -51,21 +51,24 @@ class App extends Component {
     return (
       <div className="App">
       
-        <SideBar closeNav={this.closeNav}/>
+        <SideBar closeNav={this.closeNav} venue={this.state.venue}/>
         
         <main className='main-page'>
           
           <div className='right-section' id='right-section'>
             <Header openNav={this.openNav}/>
             <section>
+
               <Map
                 venue={this.state.venue}
-                isMarkerShown
+                
                 containerElement={<div style={{height: '100%'}}/>}
                 mapElement={<div style={{height: '100%'}}/>}
                 loadingElement={<div style={{height: '100%'}}/>}
                 googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyDxLUeezrEtn52a8Jt4JNrxeLd69WVyHBQ&v=3.exp&libraries=geometry,drawing,places'
               />
+
+              
             </section>
             <Footer/>
           </div>
