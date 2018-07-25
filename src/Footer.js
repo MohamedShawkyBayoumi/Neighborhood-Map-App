@@ -8,7 +8,7 @@ class Footer extends React.Component {
                     <div className='f-pyramids'></div>
                     <div className='footer-text'>
                         <span className='copy-rights'>
-                        Powered By &copy; <a target='_blank' href='https://www.linkedin.com/in/mohamedshawkybayoumi/'>Mohamed Shawky</a>
+                        Powered and Designed By &copy; <a target='_blank' href='https://www.linkedin.com/in/mohamedshawkybayoumi/'>Mohamed Shawky</a>
                         </span>
                     </div>
                     <div className='statue'></div>

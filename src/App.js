@@ -22,7 +22,8 @@ import * as FoursquareAPI from './FoursquareAPI'
 class App extends Component {
 
   state = {
-    venue: []
+    venue: [],
+    searchedVenues: ''
   }
 
 
@@ -32,6 +33,13 @@ class App extends Component {
     })
     
   }
+
+  
+  searchQuery(query){
+    this.setState({ searchedVenues: query })
+    
+}
+
 
 
   openNav() {
@@ -48,10 +56,17 @@ class App extends Component {
 
 
   render() {
+    
     return (
       <div className="App">
       
-        <SideBar closeNav={this.closeNav} venue={this.state.venue}/>
+        <SideBar
+          closeNav={this.closeNav}
+          venue={this.state.venue}
+          searchedVenues={this.state.searchedVenues}
+          searchQuery={this.searchQuery}
+          
+          />
         
         <main className='main-page'>
           

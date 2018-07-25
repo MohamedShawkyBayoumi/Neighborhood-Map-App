@@ -2,7 +2,7 @@ import React from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps"
 const { compose, withProps, withStateHandlers } = require("recompose");
 //const FaAnchor = require("./src/images/pharaoh");
-
+//import MarkerInfoWindow from './MarkerInfoWindow'
 
 
 
@@ -25,7 +25,7 @@ const Map = compose(
   >
 
   {console.log(props.venue)}
-  {console.log(props.venue[0].location)}
+  
 
     <Marker
       position={{ lat: 25.7188346, lng: 32.6550816 }}
