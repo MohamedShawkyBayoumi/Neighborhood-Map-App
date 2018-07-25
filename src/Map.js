@@ -3,7 +3,7 @@ import React from 'react';
 
 import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps"
 import MarkerInfoWindow from './MarkerInfoWindow'
-const { compose, withProps, withStateHandlers } = require("recompose");
+const { compose, withStateHandlers } = require("recompose");
 
 //const FaAnchor = require("./src/images/pharaoh");
 

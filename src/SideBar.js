@@ -1,5 +1,5 @@
 import React from 'react'
-import * as FoursquareAPI from './FoursquareAPI'
+//import * as FoursquareAPI from './FoursquareAPI'
 import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
 
