@@ -24,8 +24,8 @@ const Map = compose(
 )(props =>
   
   <GoogleMap
-    defaultZoom={6.78}
-    defaultCenter={{lat: 27.9865707, lng: 30.9938622}}
+    defaultZoom={13}
+    defaultCenter={{lat: 25.694937, lng: 32.6244474}}
   >
 
 {/*
