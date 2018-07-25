@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   
-  searchQuery(query){
+  searchQuery = (query) => {
     this.setState({ searchedVenues: query })
     
 }

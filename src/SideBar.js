@@ -15,6 +15,8 @@ class SideBar extends React.Component {
             showingVenueName = this.props.venue
         }
 
+        showingVenueName.sort(sortBy('name'))
+
         return (
             <aside id='aside'>
                 <div className='pharaoh'>
