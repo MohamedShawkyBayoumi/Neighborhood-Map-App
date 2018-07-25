@@ -1,8 +1,12 @@
+
 import React from 'react';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps"
+
+import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps"
+import MarkerInfoWindow from './MarkerInfoWindow'
 const { compose, withProps, withStateHandlers } = require("recompose");
+
 //const FaAnchor = require("./src/images/pharaoh");
-//import MarkerInfoWindow from './MarkerInfoWindow'
+
 
 
 
@@ -24,18 +28,30 @@ const Map = compose(
     defaultCenter={{lat: 27.9865707, lng: 30.9938622}}
   >
 
+{/*
   {console.log(props.venue)}
-  
+  {console.log(props.venue[0].location.lat)}
 
-    <Marker
-      position={{ lat: 25.7188346, lng: 32.6550816 }}
-      onClick={props.onToggleOpen}
-    >
-      {props.isOpen &&
-      <InfoWindow onCloseClick={props.onToggleOpen}>
-          <h1>{props.venue[0].name}</h1>
-      </InfoWindow>}
-    </Marker>
+*/}
+
+{/*
+{
+  places.map(place =>
+    <MarkerInfoWindow
+     place={place}
+     // pass other stuff you need to show the Marker and InfoWindow
+    />
+  )
+}
+*/}
+
+  <MarkerInfoWindow
+  withStateHandlers= {props.withStateHandlers}
+  venue={props.venue}
+  onToggleOpen={props.onToggleOpen}
+  isOpen = {props.isOpen}
+  />
+
   </GoogleMap>
 );
 

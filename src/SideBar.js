@@ -17,6 +17,12 @@ class SideBar extends React.Component {
 
         showingVenueName.sort(sortBy('name'))
 
+        /*
+        const markerPosition = {lat: this.props.venue.location.lat, lng: this.props.venue.location.lng}
+        console.log(markerPosition)
+        */
+       
+
         return (
             <aside id='aside'>
                 <div className='pharaoh'>
@@ -35,7 +41,7 @@ class SideBar extends React.Component {
                 </div>
                 <div className='list'>
                     <ul className='list-links'>
-
+                    
                     {showingVenueName.map(v =>
                         <li key={v.id}><a href=''>{v.name}</a></li>
                     )}
