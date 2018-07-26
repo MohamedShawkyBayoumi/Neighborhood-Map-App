@@ -19,12 +19,6 @@ class MarkerInfoWindow extends React.Component {
                     position={{lat: this.props.marker.location.lat, lng: this.props.marker.location.lng}}
                     onClick={() => this.props.onToggleOpen(this.props.marker.id)}
                     >
-
-                    
-                
-                    {console.log(this.props.marker.location.lat)}
-        
-                    {console.log(this.props.venue)}
                     {this.props.placeToShow === this.props.marker.id && this.props.isOpen &&
                     <InfoWindow onCloseClick={this.props.onToggleOpen}>
                         <h1>{this.props.marker.name}</h1>

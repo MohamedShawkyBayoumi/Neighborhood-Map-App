@@ -202,6 +202,7 @@ aside .list .list-links li a {
   padding: 15px 20px;
   font-size: 14px;
   border: 1px solid rgb(43, 43, 43);
+  cursor: pointer;
   
 }
 

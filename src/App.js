@@ -58,7 +58,7 @@ class App extends Component {
   onToggleOpen = (id) => {
     this.setState({
       placeToShow: id,
-      isOpen: true
+      isOpen: !this.state.isOpen
     })
   }
 
@@ -69,6 +69,7 @@ class App extends Component {
       <div className="App">
       
         <SideBar
+          onToggleOpen={this.onToggleOpen}
           closeNav={this.closeNav}
           venue={this.state.venue}
           searchedVenues={this.state.searchedVenues}

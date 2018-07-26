@@ -43,7 +43,7 @@ class SideBar extends React.Component {
                     <ul className='list-links'>
                     
                     {showingVenueName.map(v =>
-                        <li key={v.id}><a href=''>{v.name}</a></li>
+                        <li key={v.id} ><a onClick={() => this.props.onToggleOpen(v.id)}>{v.name}</a></li>
                     )}
 
                     </ul>
