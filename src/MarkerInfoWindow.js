@@ -17,8 +17,10 @@ class MarkerInfoWindow extends React.Component {
                     <Marker
                     key={this.props.marker.id}
                     position={{lat: this.props.marker.location.lat, lng: this.props.marker.location.lng}}
-                    onClick={this.props.onToggleOpen}
+                    onClick={() => this.props.onToggleOpen(this.props.marker.id)}
                     >
+
+                    
                 
                     {console.log(this.props.marker.location.lat)}
         

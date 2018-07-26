@@ -55,8 +55,11 @@ class App extends Component {
     document.getElementById("right-section").style.marginLeft= "0";
   }
 
-  onToggleOpen(){
-    this.setState({ placeToShow: '' ,isOpen: true })
+  onToggleOpen(id){
+    this.setState({
+      placeToShow: id,
+      isOpen: true
+    })
   }
 
 
@@ -80,6 +83,7 @@ class App extends Component {
             <section>
 
               <Map
+                onToggleOpen={this.onToggleOpen}
                 venue={this.state.venue}
                 placeToShow={this.state.placeToShow}
                 isOpen={this.state.isOpen}

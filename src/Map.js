@@ -44,13 +44,12 @@ const Map = compose(
     marker={marker}
     withStateHandlers= {props.withStateHandlers}
     venue={props.venue}
-    onToggleOpen={props.onToggleOpen}
+    onToggleOpen={() => {props.onToggleOpen(marker.id)}}
     placeToShow={props.placeToShow}
     isOpen = {props.isOpen}
     />
   )}
 
-{console.log(props.venue)}
 
 
 
