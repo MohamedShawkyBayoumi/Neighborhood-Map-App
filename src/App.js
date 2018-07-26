@@ -23,7 +23,9 @@ class App extends Component {
 
   state = {
     venue: [],
-    searchedVenues: ''
+    searchedVenues: '',
+    placeToShow: '',
+    isOpen: false
   }
 
 
@@ -53,6 +55,9 @@ class App extends Component {
     document.getElementById("right-section").style.marginLeft= "0";
   }
 
+  onToggleOpen(){
+    this.setState({ placeToShow: '' ,isOpen: true })
+  }
 
 
   render() {
@@ -76,7 +81,8 @@ class App extends Component {
 
               <Map
                 venue={this.state.venue}
-                
+                placeToShow={this.state.placeToShow}
+                isOpen={this.state.isOpen}
                 containerElement={<div style={{height: '100%'}}/>}
                 mapElement={<div style={{height: '100%'}}/>}
                 loadingElement={<div style={{height: '100%'}}/>}

@@ -11,14 +11,6 @@ const { compose, withStateHandlers } = require("recompose");
 
 
 const Map = compose(
-  
-  withStateHandlers(() => ({
-    isOpen: false,
-  }), {
-    onToggleOpen: ({ isOpen }) => () => ({
-      isOpen: !isOpen,
-    })
-  }),
   withScriptjs,
   withGoogleMap
 )(props =>
@@ -45,12 +37,22 @@ const Map = compose(
 }
 */}
 
-  <MarkerInfoWindow
-  withStateHandlers= {props.withStateHandlers}
-  venue={props.venue}
-  onToggleOpen={props.onToggleOpen}
-  isOpen = {props.isOpen}
-  />
+
+  {props.venue.map(marker =>
+    <MarkerInfoWindow
+    key={marker.id}
+    marker={marker}
+    withStateHandlers= {props.withStateHandlers}
+    venue={props.venue}
+    onToggleOpen={props.onToggleOpen}
+    placeToShow={props.placeToShow}
+    isOpen = {props.isOpen}
+    />
+  )}
+
+{console.log(props.venue)}
+
+
 
   </GoogleMap>
 );
