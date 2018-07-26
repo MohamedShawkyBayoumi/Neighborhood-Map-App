@@ -55,7 +55,7 @@ class App extends Component {
     document.getElementById("right-section").style.marginLeft= "0";
   }
 
-  onToggleOpen(id){
+  onToggleOpen = (id) => {
     this.setState({
       placeToShow: id,
       isOpen: true
