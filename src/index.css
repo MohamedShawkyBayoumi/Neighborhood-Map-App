@@ -23,34 +23,46 @@ header {
   background-color: rgb(46, 46, 46);
   color: #fff;
   border-bottom: 3px solid rgb(128, 128, 128);
+  display: flex;
+  justify-content: space-between;
 }
 
 header .head-right-container {
+  
+  margin: 15px 20px 0 0;
+  
+}
+
+header .head-right-container .head-text {
   display: flex;
-  float: right;
-  margin: 15px 70px 0 0;
+  flex-wrap: wrap;
 }
 
 header .head-right-container .head-text h2 {
   margin: 0;
-  padding: 8px 15px 0 0;
-  font-size: 30px;
+  padding: 0;
+  font-size: 24px;
   font-family: 'Exo 2', sans-serif;
   letter-spacing: 5px;
   text-shadow: 0px 5px 10px rgb(26, 26, 26);
   color: #fff3db;
+  width: 250px;
+  text-align: center;
 }
 
-header .head-right-container .egypt-pin {
+header .head-right-container .head-text .egypt-pin {
   background-image: url("images/egypt-pin.png");
   background-position: center;
   background-repeat: no-repeat;
   height: 60px;
   width: 35px;
   
+  
 }
 
-
+header .hamburger-icon {
+  
+}
 
 header .hamburger-icon .key-icon {
   background-color: #27b19a;
@@ -110,17 +122,18 @@ header .hamburger-icon .openbtn:hover {
 /* Aside */
 
 aside {
-  position: fixed;
+  display: block;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   z-index: 1;
-  
   background-color: rgb(37, 37, 37);
   color: #fff;
   width: 0;
   box-shadow: 3px 10px 30px #333;
   overflow-x: hidden;
+
   transition: 0.5s;
 }
 
@@ -263,6 +276,18 @@ section {
   
 }
 
+.containerElement {
+  height: 100%;
+}
+
+.mapElement {
+  height: 100%;
+}
+
+.loadingElement {
+  height: 100%;
+}
+
 /* Map */
 
 
@@ -319,3 +344,19 @@ footer .statue {
 
 /* Footer */
 
+
+/* Responsive */
+
+
+@media screen and (max-width: 560px) {
+
+  header .head-right-container .head-text .egypt-pin {
+    display: none;
+  }
+
+
+
+}
+
+
+/* Responsive */

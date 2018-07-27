@@ -46,19 +46,19 @@ class App extends Component {
 
   openNav() {
     document.getElementById("aside").style.width = "300px";
-    document.getElementById("right-section").style.marginLeft = "300px";
+    //document.getElementById("right-section").style.marginLeft = "300px";
     
   }
 
  closeNav() {
     document.getElementById("aside").style.width = "0";
-    document.getElementById("right-section").style.marginLeft= "0";
+    //document.getElementById("right-section").style.marginLeft= "0";
   }
 
   onToggleOpen = (id) => {
     this.setState({
       placeToShow: id,
-      isOpen: !this.state.isOpen
+      isOpen: true
     })
   }
 
@@ -88,9 +88,9 @@ class App extends Component {
                 venue={this.state.venue}
                 placeToShow={this.state.placeToShow}
                 isOpen={this.state.isOpen}
-                containerElement={<div style={{height: '100%'}}/>}
-                mapElement={<div style={{height: '100%'}}/>}
-                loadingElement={<div style={{height: '100%'}}/>}
+                containerElement={<div className='containerElement'/>}
+                mapElement={<div className='mapElement' />}
+                loadingElement={<div className='loadingElement' />}
                 googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyDxLUeezrEtn52a8Jt4JNrxeLd69WVyHBQ&v=3.exp&libraries=geometry,drawing,places'
               />
 
