@@ -29,7 +29,7 @@ class SideBar extends React.Component {
                     <div className='pharaoh-img'></div>
                 </div>
                 <div className='close'>
-                    <a  className="closebtn" onClick={this.props.closeNav}>&times;</a>
+                    <button tabIndex='2' className="closebtn" onClick={this.props.closeNav}>&times;</button>
                 </div>
                 <div className='filter-section'>
                     <input

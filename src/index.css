@@ -61,13 +61,13 @@ header .head-right-container .head-text .egypt-pin {
 }
 
 header .hamburger-icon {
-  
+  margin-top: -20px;
 }
 
 header .hamburger-icon .key-icon {
   background-color: #27b19a;
   background-position: center;
-  padding: 20px 28px;
+  padding: 30px 30px;
   cursor: pointer;
   border-radius: 6px;
   width: 35px;
@@ -75,6 +75,7 @@ header .hamburger-icon .key-icon {
   background-image: url("images/menu-btn.png");
   background-repeat: no-repeat;
   box-shadow: 0px 0px 50px rgb(26, 26, 26);
+  border: none;
 }
 
 header .key-icon:hover {
