@@ -3,7 +3,7 @@ import React from 'react';
 
 import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps"
 import MarkerInfoWindow from './MarkerInfoWindow'
-const { compose, withStateHandlers } = require("recompose");
+const { compose } = require("recompose");
 
 //const FaAnchor = require("./src/images/pharaoh");
 
@@ -17,7 +17,7 @@ const Map = compose(
   
   <GoogleMap
     defaultZoom={13}
-    defaultCenter={{lat: 25.694937, lng: 32.6244474}}
+    defaultCenter={{lat: 25.7247878, lng: 32.6270236}}
   >
 
 {/*

@@ -242,7 +242,7 @@ aside .close .closebtn {
   color: #fff;
   background-color: rgb(70, 70, 70);
   border: 1px solid rgb(85, 85, 85);
-  
+  cursor: pointer;
 }
 
 
@@ -286,6 +286,29 @@ section {
 
 .loadingElement {
   height: 100%;
+}
+
+.info-window {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.info-window h1 {
+  color: darkslategrey;
+  font-size: 20px;
+}
+
+.info-window a {
+  color: darkblue;
+}
+
+.info-window a:hover {
+  color: peru;
+}
+
+.info-window p span {
+  color: rgba(235, 130, 10, 0.87);
+  font-weight: bold;
 }
 
 /* Map */
