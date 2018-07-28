@@ -25,16 +25,26 @@ class App extends Component {
     venue: [],
     searchedVenues: '',
     placeToShow: '',
-    isOpen: false
+    isOpen: false,
+    error: false
   }
 
+
+  gm_authFailure(){
+    window.alert("Google Maps error!")
+  }
 
   componentDidMount(){
-    FoursquareAPI.getVenue().then( venue => {
+    FoursquareAPI.getVenue()
+    .then( venue => {
       this.setState({ venue })
     })
-    
+    .catch(err => {
+      window.gm_authFailure = this.gm_authFailure;
+      this.setState({ error: true }); // Change some state erro to true to indicate that there was an error here
+    })
   }
+  // Then in your render, if error state is true, show a modal or popup that tells the user that occurred an error with Foursquare API
 
   
   searchQuery = (query) => {

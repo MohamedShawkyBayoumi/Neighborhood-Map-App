@@ -20,22 +20,6 @@ const Map = compose(
     defaultCenter={{lat: 25.7247878, lng: 32.6270236}}
   >
 
-{/*
-  {console.log(props.venue)}
-  {console.log(props.venue[0].location.lat)}
-
-*/}
-
-{/*
-{
-  places.map(place =>
-    <MarkerInfoWindow
-     place={place}
-     // pass other stuff you need to show the Marker and InfoWindow
-    />
-  )
-}
-*/}
 
 
   {props.venue.map(marker =>

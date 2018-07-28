@@ -29,7 +29,7 @@ class SideBar extends React.Component {
                     <div className='pharaoh-img'></div>
                 </div>
                 <div className='close'>
-                    <button tabIndex='2' className="closebtn" onClick={this.props.closeNav}>&times;</button>
+                    <button className="closebtn" onClick={this.props.closeNav}>&times;</button>
                 </div>
                 <div className='filter-section'>
                     <input
@@ -37,13 +37,13 @@ class SideBar extends React.Component {
                         placeholder='Search'
                         onChange={(event) => this.props.searchQuery(event.target.value)}
                         />
-                    <button></button>
+                    <button role="button"></button>
                 </div>
                 <div className='list'>
-                    <ul className='list-links'>
+                    <ul className='list-links' role='list'>
                     
                     {showingVenueName.map(v =>
-                        <li key={v.id} ><a onClick={() => this.props.onToggleOpen(v.id)}>{v.name}</a></li>
+                        <li key={v.id} role='list' tabIndex='0'><a onClick={() => this.props.onToggleOpen(v.id)}>{v.name}</a></li>
                     )}
 
                     </ul>
