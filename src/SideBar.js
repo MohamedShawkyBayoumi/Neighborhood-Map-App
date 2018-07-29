@@ -1,21 +1,12 @@
 import React from 'react'
 //import * as FoursquareAPI from './FoursquareAPI'
-import escapeRegExp from 'escape-string-regexp'
-import sortBy from 'sort-by'
+
 
 class SideBar extends React.Component {
 
 
     render (){
-        let showingVenueName;
-        if(this.props.searchedVenues){
-            const match = new RegExp(escapeRegExp(this.props.searchedVenues), 'i')
-            showingVenueName = this.props.venue.filter(venue => match.test(venue.name))
-        } else {
-            showingVenueName = this.props.venue
-        }
-
-        showingVenueName.sort(sortBy('name'))
+        
 
         /*
         const markerPosition = {lat: this.props.venue.location.lat, lng: this.props.venue.location.lng}
@@ -42,7 +33,7 @@ class SideBar extends React.Component {
                 <div className='list'>
                     <ul className='list-links' role='list'>
                     
-                    {showingVenueName.map(v =>
+                    {this.props.showingVenueName.map(v =>
                         <li key={v.id} role='list' tabIndex='0'><a onClick={() => this.props.onToggleOpen(v.id)}>{v.name}</a></li>
                     )}
 

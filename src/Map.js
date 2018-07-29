@@ -23,7 +23,7 @@ const Map = compose(
 
 
 
-  {props.venue.map(marker =>
+  {props.v.map(marker =>
     <MarkerInfoWindow
     key={marker.id}
     marker={marker}

@@ -16,7 +16,8 @@ C0FHXCOXYCJFEDMQRK0JLRTCZ15TFORBVWUIOGS1VNVQYG45
 https://api.foursquare.com/v2/venues/search?ll=25.694937,32.6244474&client_id=GYQCNBNLZLYOSZVSJ0WZFIWBPFVYKXLPDIFGDONAQMRRQW2P&client_secret=C0FHXCOXYCJFEDMQRK0JLRTCZ15TFORBVWUIOGS1VNVQYG45&v=20180719
 */
 import * as FoursquareAPI from './FoursquareAPI'
-
+import escapeRegExp from 'escape-string-regexp'
+import sortBy from 'sort-by'
 
 
 class App extends Component {
@@ -76,11 +77,23 @@ class App extends Component {
 
 
   render() {
+
+        let showingVenueName;
+
+        if(this.state.searchedVenues){
+            const match = new RegExp(escapeRegExp(this.state.searchedVenues), 'i')
+            showingVenueName = this.state.venue.filter(venue => match.test(venue.name))
+        } else {
+            showingVenueName = this.state.venue
+        }
+
+        showingVenueName.sort(sortBy('name'))
     
     return (
       <div className="App">
       
         <SideBar
+          showingVenueName={showingVenueName}
           onToggleOpen={this.onToggleOpen}
           closeNav={this.closeNav}
           venue={this.state.venue}
@@ -96,8 +109,9 @@ class App extends Component {
             <section>
 
               <Map
+                v={showingVenueName}
                 onToggleOpen={this.onToggleOpen}
-                venue={this.state.venue}
+                venue={showingVenueName}
                 placeToShow={this.state.placeToShow}
                 isOpen={this.state.isOpen}
                 containerElement={<div className='containerElement'/>}
