@@ -62,6 +62,7 @@ header .head-right-container .head-text .egypt-pin {
 
 header .hamburger-icon {
   margin-top: -20px;
+  
 }
 
 header .hamburger-icon .key-icon {
@@ -76,6 +77,7 @@ header .hamburger-icon .key-icon {
   background-repeat: no-repeat;
   box-shadow: 0px 0px 50px rgb(26, 26, 26);
   border: none;
+  color: #27b19a;
 }
 
 header .key-icon:hover {

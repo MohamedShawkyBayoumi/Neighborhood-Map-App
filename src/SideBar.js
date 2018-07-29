@@ -16,32 +16,34 @@ class SideBar extends React.Component {
 
         return (
             <aside id='aside'>
-                <div className='pharaoh'>
-                    <div className='pharaoh-img'></div>
-                </div>
-                <div className='close'>
-                    <button role='button' className="closebtn" onClick={this.props.closeNav}>&times;</button>
-                </div>
-                <div className='filter-section'>
-                
-                    <input
-                        type='text'
-                        placeholder='Search'
-                        role="textbox" 
-                        aria-label = "Enter the historical place name"
-                        onChange={(event) => this.props.searchQuery(event.target.value)}
-                        />
-                
-                </div>
-                <div className='list'>
-                    <ul className='list-links' role='list'>
+                <nav>
+                    <div className='pharaoh'>
+                        <div className='pharaoh-img'></div>
+                    </div>
+                    <nav className='close'>
+                        <button role='button' aria-label='close list filter' className="closebtn" onClick={this.props.closeNav}>&times;</button>
+                    </nav>
+                    <div className='filter-section'>
                     
-                    {this.props.showingVenueName.map(v =>
-                        <li key={v.id} role='list' tabIndex='0'><a onClick={() => this.props.onToggleOpen(v.id)}>{v.name}</a></li>
-                    )}
+                        <input
+                            type='text'
+                            placeholder='Search'
+                            role="textbox" 
+                            aria-label = "Enter the historical place name"
+                            onChange={(event) => this.props.searchQuery(event.target.value)}
+                            />
+                    
+                    </div>
+                    <div className='list'>
+                        <ul className='list-links' role='list'>
+                        
+                        {this.props.showingVenueName.map(v =>
+                            <li key={v.id} tabIndex='0'><a onClick={() => this.props.onToggleOpen(v.id)}>{v.name}</a></li>
+                        )}
 
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
+                </nav>
             </aside>
         )
     }

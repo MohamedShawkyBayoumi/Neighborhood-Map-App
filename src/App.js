@@ -60,6 +60,7 @@ class App extends Component {
   openNav() {
     document.getElementById("aside").style.width = "350px";
     //document.getElementById("right-section").style.marginLeft = "300px";
+    document.getElementById('aside').focus();
     
   }
 

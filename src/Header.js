@@ -8,10 +8,10 @@ class Header extends React.Component {
     render(){
         return (
             <header>
-                <div className='hamburger-icon'>
+                <nav className='hamburger-icon'>
                     {/*<span className='openbtn' onClick={this.props.openNav} >&#9776;</span>*/}
-                    <button role='button' tabIndex='0' className='key-icon' onClick={this.props.openNav}>.</button>
-                </div>
+                    <button tabIndex='0' className='key-icon' onClick={this.props.openNav} role='button' aria-label='navigation button'></button>
+                </nav>
                 <div className='head-right-container'>
                     
                     <div className='head-text'>
