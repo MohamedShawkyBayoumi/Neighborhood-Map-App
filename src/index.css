@@ -142,7 +142,7 @@ aside .filter-section {
   width: 100%;
   display: flex;
   margin: 0 auto;
-  padding: 80px 10px 0 10px;
+  padding-top: 80px;
   
 }
 
@@ -157,6 +157,7 @@ aside .filter-section input {
   background-image: url("images/bg.png");
   color: #ffe0a3;
   font-size: 16px;
+  margin: 0 10px;
 }
 
 
@@ -170,7 +171,7 @@ aside .filter-section input:active {
 }
 
 /*
-aside .filter-section span {
+aside .filter-section button {
   letter-spacing: 1px;
   margin-right: 20px;
   height:41px;
@@ -186,11 +187,13 @@ aside .filter-section span {
   cursor: pointer;
   padding: 28px 30px;
 }
-*/
+
 
 aside .filter-section button:hover {
   background-color: #ffc041;
 }
+*/
+
 
 aside .list {
   margin-top: 20px;
