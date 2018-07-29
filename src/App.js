@@ -29,11 +29,11 @@ class App extends Component {
     error: false
   }
 
-
+/*
   gm_authFailure(){
     window.alert("Google Maps error!")
   }
-
+*/
 
   componentDidMount(){
     FoursquareAPI.getVenue()
@@ -41,7 +41,8 @@ class App extends Component {
       this.setState({ venue })
     })
     .catch(err => {
-      window.gm_authFailure = this.gm_authFailure;
+      //window.gm_authFailure = this.gm_authFailure;
+      alert("failed while fetching")
       this.setState({ error: true }); // Change some state erro to true to indicate that there was an error here
     })
   }

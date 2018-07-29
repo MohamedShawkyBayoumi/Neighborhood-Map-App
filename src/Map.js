@@ -16,6 +16,7 @@ const Map = compose(
 )(props =>
   
   <GoogleMap
+    //onTilesLoaded={() => {this.handleError}}
     defaultZoom={13}
     defaultCenter={{lat: 25.7247878, lng: 32.6270236}}
   >

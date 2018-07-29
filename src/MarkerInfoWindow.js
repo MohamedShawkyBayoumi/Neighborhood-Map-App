@@ -15,10 +15,12 @@ function makeMarkerIcon(markerColor) {
     
 }
 
-
-const iconDefault = makeMarkerIcon('0091ff');
-const iconOpen = makeMarkerIcon('FFFF24');
 */
+
+
+const iconDefault = 'http://maps.google.com/mapfiles/ms/icons/blue.png';
+const iconOpen = 'http://maps.google.com/mapfiles/ms/icons/red.png';
+
 
 
 class MarkerInfoWindow extends React.Component {
@@ -32,7 +34,7 @@ class MarkerInfoWindow extends React.Component {
             <div>
 
                 <Marker
-                    /*icon={this.props.placeToShow === this.props.marker.id && this.props.isOpen ? { url: iconOpen } : { url: iconDefault }}*/
+                    icon={this.props.placeToShow === this.props.marker.id && this.props.isOpen ? { url: iconOpen } : { url: iconDefault }}
                     key={this.props.marker.id}
                     position={{lat: this.props.marker.location.lat, lng: this.props.marker.location.lng}}
                     onClick={() => this.props.onToggleOpen(this.props.marker.id)}
