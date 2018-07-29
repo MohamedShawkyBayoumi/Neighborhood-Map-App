@@ -20,15 +20,18 @@ class SideBar extends React.Component {
                     <div className='pharaoh-img'></div>
                 </div>
                 <div className='close'>
-                    <button className="closebtn" onClick={this.props.closeNav}>&times;</button>
+                    <button role='button' className="closebtn" onClick={this.props.closeNav}>&times;</button>
                 </div>
                 <div className='filter-section'>
+                
                     <input
                         type='text'
                         placeholder='Search'
+                        role="textbox" 
+                        aria-label = "Enter the historical place name"
                         onChange={(event) => this.props.searchQuery(event.target.value)}
                         />
-                    <button role="button"></button>
+                
                 </div>
                 <div className='list'>
                     <ul className='list-links' role='list'>

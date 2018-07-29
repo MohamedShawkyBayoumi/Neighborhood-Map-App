@@ -10,7 +10,7 @@ class Header extends React.Component {
             <header>
                 <div className='hamburger-icon'>
                     {/*<span className='openbtn' onClick={this.props.openNav} >&#9776;</span>*/}
-                    <button tabIndex='0' className='key-icon' onClick={this.props.openNav}></button>
+                    <button role='button' tabIndex='0' className='key-icon' onClick={this.props.openNav}>.</button>
                 </div>
                 <div className='head-right-container'>
                     

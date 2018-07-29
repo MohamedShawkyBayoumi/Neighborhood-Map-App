@@ -169,7 +169,8 @@ aside .filter-section input:active {
   border: 2px solid #ffc041;
 }
 
-aside .filter-section button {
+/*
+aside .filter-section span {
   letter-spacing: 1px;
   margin-right: 20px;
   height:41px;
@@ -185,6 +186,7 @@ aside .filter-section button {
   cursor: pointer;
   padding: 28px 30px;
 }
+*/
 
 aside .filter-section button:hover {
   background-color: #ffc041;
