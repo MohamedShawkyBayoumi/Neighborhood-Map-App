@@ -35,12 +35,16 @@ class App extends Component {
   }
 
   componentDidMount(){
+    window.gm_authFailure = this.gm_authFailure;
+}
+
+  componentDidMount(){
     FoursquareAPI.getVenue()
     .then( venue => {
       this.setState({ venue })
     })
     .catch(err => {
-      window.gm_authFailure = this.gm_authFailure;
+      //window.gm_authFailure = this.gm_authFailure;
       this.setState({ error: true }); // Change some state erro to true to indicate that there was an error here
     })
   }
