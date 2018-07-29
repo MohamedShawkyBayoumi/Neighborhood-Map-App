@@ -1,5 +1,5 @@
 import React from 'react'
-import { Marker, InfoWindow, GoogleMap } from "react-google-maps"
+import { Marker, InfoWindow } from "react-google-maps"
 
 require("recompose");
 
