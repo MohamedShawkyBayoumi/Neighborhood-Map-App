@@ -15,7 +15,7 @@ class SideBar extends React.Component {
        
 
         return (
-            <aside id='aside'>
+            <aside id='aside' tabIndex='0'>
                 <nav>
                     <div className='pharaoh'>
                         <div className='pharaoh-img'></div>
@@ -29,7 +29,7 @@ class SideBar extends React.Component {
                             type='text'
                             placeholder='Search'
                             role="textbox" 
-                            aria-label = "Enter the historical place name"
+                            aria-label = "Enter the Ancient place name"
                             onChange={(event) => this.props.searchQuery(event.target.value)}
                             />
                     

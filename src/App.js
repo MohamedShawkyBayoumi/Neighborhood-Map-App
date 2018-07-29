@@ -67,6 +67,7 @@ class App extends Component {
  closeNav() {
     document.getElementById("aside").style.width = "0";
     //document.getElementById("right-section").style.marginLeft= "0";
+    document.getElementById('map-section').focus();
   }
 
   onToggleOpen = (id) => {
@@ -107,7 +108,7 @@ class App extends Component {
           
           <div className='right-section' id='right-section'>
             <Header openNav={this.openNav}/>
-            <section>
+            <section id='map-section' tabIndex='0'>
 
               <Map
                 v={showingVenueName}
