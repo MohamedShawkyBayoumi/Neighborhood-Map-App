@@ -6,6 +6,7 @@ This is the last project in Google scholarship Udacity Nanodegree in Front End D
 * This project to check some Egypt Ancient Locations in Luxor like temples
 * There is a sidebar menu you can check it and use it for filter those locations
 * you can check some more information about the places by clicking on the Markers on the Map
+* you can check the live version here : https://mohamedshawkybayoumi.github.io/Neighborhood-Map-App/
 
 
 ## To Use it in your PC ( For Developers ) 

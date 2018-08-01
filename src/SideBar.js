@@ -38,7 +38,9 @@ class SideBar extends React.Component {
                         <ul className='list-links' role='list'>
                         
                         {this.props.showingVenueName.map(v =>
-                            <li key={v.id} tabIndex='0'><a onClick={() => this.props.onToggleOpen(v.id)}>{v.name}</a></li>
+                            <li
+                            key={v.id}
+                            tabIndex='0'><a onClick={() => this.props.onToggleOpen(v.id)} >{v.name}</a></li>
                         )}
 
                         </ul>
