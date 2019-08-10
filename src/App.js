@@ -49,13 +49,9 @@ class App extends Component {
   }
   // Then in your render, if error state is true, show a modal or popup that tells the user that occurred an error with Foursquare API
 
-  
   searchQuery = (query) => {
     this.setState({ searchedVenues: query })
-    
-}
-
-
+  }
 
   openNav() {
     document.getElementById("aside").style.width = "350px";
@@ -77,24 +73,21 @@ class App extends Component {
     })
   }
 
-  
-
   render() {
 
-        let showingVenueName;
+    let showingVenueName;
 
-        if(this.state.searchedVenues){
-            const match = new RegExp(escapeRegExp(this.state.searchedVenues), 'i')
-            showingVenueName = this.state.venue.filter(venue => match.test(venue.name))
-        } else {
-            showingVenueName = this.state.venue
-        }
+    if(this.state.searchedVenues){
+      const match = new RegExp(escapeRegExp(this.state.searchedVenues), 'i')
+      showingVenueName = this.state.venue.filter(venue => match.test(venue.name))
+    } else {
+      showingVenueName = this.state.venue
+    }
 
-        showingVenueName.sort(sortBy('name'))
+    showingVenueName.sort(sortBy('name'))
     
     return (
       <div className="App">
-      
         <SideBar
           showingVenueName={showingVenueName}
           onToggleOpen={this.onToggleOpen}
@@ -102,11 +95,9 @@ class App extends Component {
           venue={this.state.venue}
           searchedVenues={this.state.searchedVenues}
           searchQuery={this.searchQuery}
-          
-          />
+        />
         
-        <main className='main-page'>
-          
+        <main className='main-page'>  
           <div className='right-section' id='right-section'>
             <Header openNav={this.openNav}/>
             <section id='map-section' tabIndex='0'>
@@ -120,10 +111,8 @@ class App extends Component {
                 containerElement={<div className='containerElement'/>}
                 mapElement={<div className='mapElement' />}
                 loadingElement={<div className='loadingElement' />}
-                googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyDxLUeezrEtn52a8Jt4JNrxeLd69WVyHBQ&v=3.exp&libraries=geometry,drawing,places'
+                googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyDWEjkT8J2pKroWpQiRYOgXgo1Pxemx5XY&v=3.exp&libraries=geometry,drawing,places'
               />
-
-              
             </section>
             <Footer/>
           </div>

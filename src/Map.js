@@ -1,47 +1,33 @@
-
 import React from 'react';
+import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps";
+import MarkerInfoWindow from './MarkerInfoWindow';
+import { compose } from "recompose";
 
-import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps"
-import MarkerInfoWindow from './MarkerInfoWindow'
-const { compose } = require("recompose");
-
-//const FaAnchor = require("./src/images/pharaoh");
-
-
-
-
-const Map = compose(
-  withScriptjs,
-  withGoogleMap
-)(props =>
+const Map = (({v, withStateHandlers, venue, onToggleOpen, placeToShow, isOpen}) =>
   
   <GoogleMap
     //onTilesLoaded={() => {this.handleError}}
     defaultZoom={13}
     defaultCenter={{lat: 25.7247878, lng: 32.6270236}}
   >
-
-
-
-  {props.v.map(marker =>
-    <MarkerInfoWindow
-    key={marker.id}
-    marker={marker}
-    withStateHandlers= {props.withStateHandlers}
-    venue={props.venue}
-    onToggleOpen={() => {props.onToggleOpen(marker.id)}}
-    placeToShow={props.placeToShow}
-    isOpen = {props.isOpen}
-    />
-  )}
-
-
-
-
+    {v.map(marker =>
+      <MarkerInfoWindow
+      key={marker.id}
+      marker={marker}
+      withStateHandlers= {withStateHandlers}
+      venue={venue}
+      onToggleOpen={() => {onToggleOpen(marker.id)}}
+      placeToShow={placeToShow}
+      isOpen = {isOpen}
+      />
+    )}
   </GoogleMap>
 );
 
-export default Map
+export default compose(
+  withScriptjs,
+  withGoogleMap
+)(Map)
 
 
 /*

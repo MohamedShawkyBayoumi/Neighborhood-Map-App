@@ -1,19 +1,18 @@
 import React from 'react'
 //import * as FoursquareAPI from './FoursquareAPI'
 
-
 class SideBar extends React.Component {
-
-
     render (){
-        
-
+        const {
+            closeNav,
+            searchQuery,
+            showingVenueName,
+            onToggleOpen
+        } = this.props;
         /*
-        const markerPosition = {lat: this.props.venue.location.lat, lng: this.props.venue.location.lng}
+        const markerPosition = {lat: venue.location.lat, lng: venue.location.lng}
         console.log(markerPosition)
         */
-       
-
         return (
             <aside id='aside' tabIndex='0'>
                 <nav>
@@ -21,28 +20,24 @@ class SideBar extends React.Component {
                         <div className='pharaoh-img'></div>
                     </div>
                     <nav className='close'>
-                        <button role='button' aria-label='close list filter' className="closebtn" onClick={this.props.closeNav}>&times;</button>
+                        <button role='button' aria-label='close list filter' className="closebtn" onClick={closeNav}>&times;</button>
                     </nav>
                     <div className='filter-section'>
-                    
                         <input
                             type='text'
                             placeholder='Search'
                             role="textbox" 
                             aria-label = "Enter the Ancient place name"
-                            onChange={(event) => this.props.searchQuery(event.target.value)}
-                            />
-                    
+                            onChange={(event) => searchQuery(event.target.value)}
+                        />
                     </div>
                     <div className='list'>
                         <ul className='list-links' role='list'>
-                        
-                        {this.props.showingVenueName.map(v =>
+                        {showingVenueName.map(v =>
                             <li
                             key={v.id}
-                            tabIndex='0'><a onClick={() => this.props.onToggleOpen(v.id)} >{v.name}</a></li>
+                            tabIndex='0'><a onClick={() => onToggleOpen(v.id)} >{v.name}</a></li>
                         )}
-
                         </ul>
                     </div>
                 </nav>
